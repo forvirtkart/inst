@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Create some instagram templates</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+</head>
+<body class="bg-light">
+<div class="container">
+<div class="row">
+<div class="col-sm">
+ <h1></h1>
+<form action="gensome.php" method="post" class="form-horizontal" target="_blank">
+    <div class="form-group">
+    <label for="nicks">Профили Инстаграм</label>
+    <textarea id="nicks" class="form-control" name="nicks" cols="20" rows="10"></textarea>
+    </div>
+  
+    <div class="form-group">
+    <button type="submit" class="btn btn-success">
+	Поехали!</button>
+    </div>
+</form>
+
+<script>
+ $(document).ready(function(){   
+ $('form').on('submit', function(){ 
+ $('form button').attr('disabled','disabled').text('Загрузка скоро начнется...');
+ $('spinner-grow').show();   
+  
+  
+   
+   setTimeout(function () {
+      location.reload();
+   }, 5000);
+ });
+
+});
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
